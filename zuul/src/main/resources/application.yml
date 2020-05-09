@@ -13,4 +13,4 @@ zuul:
   routes:
     api-a:
       serviceId: oauth
-      path: /oauth/**
+      path: /ryb-o/**

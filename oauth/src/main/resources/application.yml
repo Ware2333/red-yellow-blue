@@ -1,6 +1,17 @@
 spring:
   application:
     name: oauth # 服务名称
+  datasource:
+    url: jdbc:mysql://localhost:3306/ryb?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: root
+    driver-class-name: org.gjt.mm.mysql.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    dbcp2:
+      min-idle: 5         #数据库连接池的最小维持连接数
+      initial-size: 5     #初始化提供的连接数
+      max-total: 5          #最大的连接数
+      max-wait-millis: 200        #等待连接获取的最大超时时间
 
 # 服务注册中心
 eureka:
@@ -10,3 +21,7 @@ eureka:
 
 server:
   port: 8041
+
+mybatis:
+  type-aliases-package: com.gyf.domain
+  mapper-locations: classpath:mapper/*Mapper.xml
