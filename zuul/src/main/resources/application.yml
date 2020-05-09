@@ -1,0 +1,16 @@
+server:
+  port: 8043
+spring:
+  application:
+    name: zuul
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+    registerWithEureka: true
+    fetchRegistry: true
+zuul:
+  routes:
+    api-a:
+      serviceId: oauth
+      path: /oauth/**

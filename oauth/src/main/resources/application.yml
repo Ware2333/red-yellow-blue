@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: oauth # 服务名称
+
+# 服务注册中心
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+
+server:
+  port: 8041
